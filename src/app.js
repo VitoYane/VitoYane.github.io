@@ -11,6 +11,11 @@ Date.prototype.yyyymmdd = function() {
     var dd  = this.getDate().toString();
     return yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-" + (dd[1]?dd:"0"+dd[0]);
 };
+Date.prototype.hhmm = function() {
+    var hh = this.getHours().toString();
+    var mm = this.getMinutes().toString();
+    return hh + mm;
+};
 function reescape(data) {
     return data.replace(/>/g, "&gt;").replace(/</g, "&lt;");
 }
@@ -227,10 +232,12 @@ $(document).ready(function() {
                         if (type.slice(3) == "post") {
                             $("#postSave").attr("href", "#/posts/savepost");
                             $("#postDelete").attr("href", "#/posts");
+							$("#postpath").val("blogs/" + (new Date()).yyyymmdd() + "/" + (new Date()).hhmm() + ".html");
                         }
                         if (type.slice(3) == "page") {
                             $("#postSave").attr("href", "#/posts/savepage");
                             $("#postDelete").attr("href", "#/posts");
+							$("#postpath").val("pages/");
                         }
                         $("#postdate").val((new Date()).yyyymmdd());
                     }
