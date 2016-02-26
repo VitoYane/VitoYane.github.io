@@ -232,7 +232,7 @@ $(document).ready(function() {
                         if (type.slice(3) == "post") {
                             $("#postSave").attr("href", "#/posts/savepost");
                             $("#postDelete").attr("href", "#/posts");
-							$("#postpath").val("blogs/" + (new Date()).yyyymmdd() + "/" + (new Date()).hhmm() + ".html");
+							$("#postpath").val("blogs/" + (new Date()).yyyymmdd() + "-[" + (new Date()).hhmm() + "].html");
                         }
                         if (type.slice(3) == "page") {
                             $("#postSave").attr("href", "#/posts/savepage");
