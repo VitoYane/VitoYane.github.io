@@ -1,0 +1,2297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Vito Yane</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+<script async src="http://c.cnzz.com/core.php"></script></head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href=file6407.htm>
+<link rel=File-List href="file6407.files/filelist.xml">
+</head>
+
+<body lang=zh-CN style='font-family:Calibri;font-size:10.5pt;color:black'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:10.4791in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:3.2534in'>
+
+<p style='margin-top:0pt;margin-bottom:3pt;font-family:微软雅黑;font-size:20.0pt;
+color:black'><span style='font-weight:bold'>应该知道的Linux技巧</span></p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:1.5805in'>
+
+
+</div>
+
+<div style='direction:ltr;margin-top:.4979in;margin-left:0in;width:10.4791in'>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>这篇文章来源于Quroa的一个问答《What are some
+time-saving tips that every Linux user should know?》——
+Linux用户有哪些应该知道的提高效率的技巧。我觉得挺好的，总结得比较好，把其转过来，并加了一些自己的理解。 首先，我想告诉大家，</span><span
+style='font-weight:bold;background:white'>在Unix/Linux下，最有效率技巧的不是操作图形界面，而是命令行操作，因为命令行意味着自动化</span><span
+style='background:white'>。如果你看过《你可能不知道的Shell》以及《28个Unix/Linux的命令行神器》你就会知道Linux有多强大，这个强大完全来自于命令行，于是，就算你不知道怎么去做一个环保主义的程序员，至少他们可以让你少熬点夜，从而有利于你的身体健康和性生活。下面是一个有点长的列表，正如作者所说，你并不需要知道所有的这些东西，但是如果你还在很沉重地在使用Linux的话，这些东西都值得你看一看。
+（注：如果你想知道下面涉及到的命令的更多的用法，你一定要man一点。对于一些命令，你可以需要先yum或apt-get来安装一下，如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C'><span style='background:white'>基础</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-weight:bold;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>学习</span><span style='font-weight:bold;
+font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>&nbsp;Bash&nbsp;</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>。你可以</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>man
+bash</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来看看</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>bash</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>的东西，并不复杂也并不长。你用别的</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>shell</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>也行，但是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>bash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>是很强大的并且也是系统默认的。（学习</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>zsh</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>或</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>tsch</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>只会让你在很多情况下受到限制）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-weight:bold;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>学习</span><span style='font-weight:bold;
+font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> vim</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>&nbsp;</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>。在</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Linux</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>下，基本没有什么可与之竞争的编</span><span
+style='text-decoration:line-through;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>译</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>辑器（就算你是一个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Emacs</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>或</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Eclipse</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的重度用户）。你可以看看《简明</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>vim</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>攻略》和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>《</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Vim</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的冒险游戏》以及《给程序员的</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Vim</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>速查卡》还有《把</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Vim</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>变成一个编程的</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>IDE</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>》等等。</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-weight:bold;font-family:"Segoe UI Symbol";font-size:10.5pt;
+color:#333333;background:white'>●</span><span style='font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>了解</span><span
+style='font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'> ssh</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>。明白不需要口令的用户认证（通过</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ssh-agent, ssh-add</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>），学会用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ssh</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>翻墙，用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>scp</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>而不是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ftp</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>传文件，等等。你知道吗？</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>scp
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>远端的时候，你可以按</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>tab</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>键来查看远端的目录和文件（当然，需要无口令的用户认证），这都是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>bash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的功劳。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-weight:bold;font-family:"Segoe UI Symbol";font-size:10.5pt;
+color:#333333;background:white'>●</span><span style='font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>熟悉</span><span
+style='font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>bash</span><span style='font-weight:bold;font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>的作业管理</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>，如：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+&amp;, Ctrl-Z, Ctrl-C, jobs, fg, bg, kill, </span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>等等。当然，你也要知道</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Ctrl+\</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>（</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>SIGQUIT</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>）和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Ctrl+C
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>（</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>SIGINT</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>）的区别。</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-weight:bold;font-family:"Segoe UI Symbol";font-size:10.5pt;
+color:#333333;background:white' lang=zh-CN>●</span><span style='font-weight:
+bold;font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>简单的文件管理</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>&nbsp;</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN> ls </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>和</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> ls -l (</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>你最好知道</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> “</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=en-US>ls -l” </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>的每一列的意思</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>), less, head, tail </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> tail -f, ln </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> ln -s (</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>你知道明白</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>hard link</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>soft link</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>的不同和优缺点</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>), chown, chmod, du (</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>如果你想看看磁盘的大小</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> du -sk *), df, mount</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>。当然，原作者忘了</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>find</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>命令。</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-weight:bold;font-family:"Segoe UI Symbol";font-size:10.5pt;
+color:#333333;background:white'>●</span><span style='font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>基础的网络管理</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> ip
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>或</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'> ifconfig, dig</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>。当然，原作者还忘了如</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>netstat,
+ping, traceroute, </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>等</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-weight:bold;font-family:"Segoe UI Symbol";font-size:10.5pt;
+color:#333333;background:white'>●</span><span style='font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>理解正则表达式</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>，还有</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>grep/egrep</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的各种选项。比如：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+-o, -A, </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> -B </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>这些选项是很值得了解的。</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-weight:bold;font-family:"Segoe UI Symbol";font-size:10.5pt;
+color:#333333;background:white'>●</span><span style='font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>学习使用</span><span
+style='font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'> apt-get </span><span style='font-weight:bold;font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'> yum </span><span style='font-weight:bold;font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>来查找和安装软件</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>（前者的经典分发包是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Ubuntu</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>，后者的经典分发包是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Redhat</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>），我还建议你试着从源码编译安装软件。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C'><span style='font-weight:bold;background:white'>日常</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>在</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> bash </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>里，使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+Ctrl-R </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>而不是上下光标键来查找历史命令。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>在</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> bash</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>里，使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+Ctrl-W </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来删除最后一个单词，使用</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> Ctrl-U </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来删除一行。请</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>man
+bash</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>后查找</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>Readline Key Bindings</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>一节来看看</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>bash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的默认热键，比如：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Alt-.
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>把上一次命令的最后一个参数打出来，而</span><span style='font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white'>Alt-* </span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>则列出你可以输入的命令。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>回到上一次的工作目录：</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> cd </span><span
+style='font-family:"Helvetica Neue";font-size:12.0pt;color:#3E3E3E;background:
+white'>–</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'> &nbsp;</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>（回到</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>home</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> cd
+~</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> xargs</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>。这是一个很强大的命令。你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>-L</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来限定有多少个命令，也可以用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>-P</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来指定并行的进程数。如果你不知道你的命令会变成什么样，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>xargs
+echo</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来看看会是什么样。当然，</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> -I{} </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>也很好用。示例：</span></p>
+
+<p style='margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<div style='direction:ltr'>
+
+<table border=1 cellpadding=0 cellspacing=0 valign=top style='direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in'>
+ <tr>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>1</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>2</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>3</p>
+  </td>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:3.1555in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>find . -name \*.py |
+  xargs grep some_function</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>cat hosts | xargs
+  -I{} ssh root@{} hostname</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>pstree -p </span><span style='font-family:微软雅黑;font-size:
+12.0pt;color:#3E3E3E;background:white'>可以帮你显示进程树。（读过我的那篇《一个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>fork</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的面试题》的人应该都不陌生）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> pgrep </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+pkill </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来找到或是</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>kill </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>某个名字的进程。</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+(-f </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>选项很有用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>).</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解可以发给进程的信号。例如：要挂起一个进程，使用</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> kill -STOP [pid]. </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+man 7 signal </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来查看各种信号，使用</span><span style='font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white'>kill -l </span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来查看数字和信号的对应表</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> nohup </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>或</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+&nbsp;disown </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你要让某个进程运行在后台。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>netstat -lntp</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来看看有侦听在网络某端口的进程。当然，也可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+lsof</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>在</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>bash</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>的脚本中，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+set -x </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>debug</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>输出。使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+set -e </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>来当有错误发生的时候</span><span style='font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white'>abort</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>执行。考虑使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+set -o pipefail </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>来限制错误。还可以使用</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>trap</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来截获信号（如截获</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ctrl+c</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>）。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>在bash 脚本中，subshells (写在圆括号里的)
+是一个很方便的方式来组合一些命令。一个常用的例子是临时地到另一个目录中，例如：</span></p>
+
+<p style='margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<div style='direction:ltr'>
+
+<table border=1 cellpadding=0 cellspacing=0 valign=top style='direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in'>
+ <tr>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>1</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>2</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>3</p>
+  </td>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:2.7125in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'># do something in
+  current dir</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>(cd /some/other/dir;
+  other-command)</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'># continue in
+  original dir</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white' lang=zh-CN>●</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>在</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> bash </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>中，注意那里有很多的变量展开。如：检查一个变量是否存在</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>: ${name:?error
+message}</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white' lang=zh-CN>。如果一个</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>bash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>的脚本需要一个参数，也许就是这样一个表达式</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>
+input_file=${1:?usage: $0 input_file}</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>。一个计算表达式：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN> i=$(( (i + 1) % 5 ))</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>。一个序列：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN> {1..10}</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>。</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>截断一个字符串：</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> ${var%suffix} </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> ${var#prefix}</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>。</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> </span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>示例：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN> if var=foo.pdf, then echo ${var%.pdf}.txt prints “</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=en-US>foo.txt”.</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>通过</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> &lt;(some command) </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>可以把某命令当成一个文件。示例：比较一个本地文件和远程文件</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+/etc/hosts</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>：</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> diff /etc/hosts &lt;(ssh somehost cat
+/etc/hosts)</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white' lang=zh-CN>●</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>了解什么叫</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> “</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=en-US>here documents” </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>，就是诸如</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> cat
+&lt;&lt;EOF </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white' lang=zh-CN>这样的东西。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white' lang=zh-CN>●</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>在</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> bash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>中，使用重定向到标准输出和标准错误。如：</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> some-command
+&gt;logfile 2&gt;&amp;1</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>。另外，要确认某命令没有把某个打开了的文件句柄重定向给标准输入，最佳实践是加上</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN> “</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=en-US>&lt;/dev/null”</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>，把</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>/dev/null</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>重定向到标准输入。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> man ascii </span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来查看</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+ASCII </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>表。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>在远端的</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> ssh </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>会话里，使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+screen </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>或</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> dtach </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>来保存你的会话。（参看《</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>28</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Unix/Linux</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的命令行神器》）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>要来</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>debug Web</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>，试试</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>curl
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>和</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'> curl -I </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>或是</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> wget </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>。我觉得</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>debug
+Web</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>的利器是</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>firebug</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>，</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>curl</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>wget</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>是用来抓网页的，呵呵。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>把</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> HTML </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>转成文本：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+lynx -dump -stdin</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你要处理</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>XML</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>，使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+xmlstarlet</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>对于</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> Amazon S3</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>，</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+s3cmd </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>是一个很方便的命令（还有点不成熟）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>在</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> ssh</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>中，知道怎么来使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ssh</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>隧道。通过</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> -L
+or -D (</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>还有</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>-R) </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>，翻墙神器。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>你还可以对你的ssh 做点优化。比如，.ssh/config
+包含着一些配置：避免链接被丢弃，链接新的host时不需要确认，转发认证，以前使用压缩（如果你要使用scp传文件）：</span></p>
+
+<p style='margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<div style='direction:ltr'>
+
+<table border=1 cellpadding=0 cellspacing=0 valign=top style='direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in'>
+ <tr>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>1</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>2</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>3</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>4</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>5</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>6</p>
+  </td>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:1.9694in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>TCPKeepAlive=yes</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>ServerAliveInterval=15</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>ServerAliveCountMax=6</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>StrictHostKeyChecking=no</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>Compression=yes</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>ForwardAgent=yes</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你有输了个命令行，但是你改变注意了，但你又不想删除它，因为你要在历史命令中找到它，但你也不想执行它。那么，你可以按下</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+Alt-# </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>，于是这个命令关就被加了一个</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>#</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>字符，于是就被注释掉了。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C'><span style='font-weight:bold;background:white'>数据处理&nbsp;</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> sort </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+uniq </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>命令</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> (</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>包括</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+uniq </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>的</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> -u </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> -d
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>选项</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>).</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> cut, paste, </span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+join </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>命令来操作文本文件。很多人忘了在</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>cut</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>前使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>join</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>如果你知道怎么用sort/uniq来做集合交集、并集、差集能很大地促进你的工作效率。假设有两个文本文件a和b已解被
+uniq了，那么，用sort/uniq会是最快的方式，无论这两个文件有多大（sort不会被内存所限，你甚至可以使用-T选项，如果你的/tmp目录很小）</span></p>
+
+<p style='margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt'>&nbsp;</p>
+
+<div style='direction:ltr'>
+
+<table border=1 cellpadding=0 cellspacing=0 valign=top style='direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in'>
+ <tr>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>1</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>2</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>3</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>4</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right'>5</p>
+  </td>
+  <td style='border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:4.0611in;padding:2.0pt 3.0pt 2.0pt 3.0pt'>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'><span lang=zh-CN>cat
+  a b | sort | uniq &gt; c&nbsp;&nbsp;</span><span lang=en-US> # c is a union b
+  </span><span lang=zh-CN>并集</span></p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.5pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'><span lang=zh-CN>cat
+  a b | sort | uniq -d &gt; c&nbsp;&nbsp;</span><span lang=en-US> # c is a
+  intersect b </span><span lang=zh-CN>交集</span></p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:微软雅黑;font-size:10.0pt'><span lang=zh-CN>cat
+  a b b | sort | uniq -u &gt; c&nbsp;&nbsp;</span><span lang=en-US> # c is set
+  difference a - b </span><span lang=zh-CN>差集</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解和字符集相关的命令行工具，包括排序和性能。很多的</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Linux</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>安装程序都会设置</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>LANG
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>或是其它和字符集相关的环境变量。这些东西可能会让一些命令（如：</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>sort</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>）的执行性能慢</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>N</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>多倍（注：就算是你用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>UTF-8</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>编码文本文件，你也可以很安全地使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ASCII</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来对其排序）。如果你想</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Disable</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>那个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>i18n
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>并使用传统的基于</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>byte</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>的排序方法，那就设置</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>export&nbsp;LC_ALL=C
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>（实际上，你可以把其放在</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> .bashrc</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>）。如果这设置这个变量，你的</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>sort</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>命令很有可能会是错的。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white' lang=zh-CN>●</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>了解</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN> awk </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> sed</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>，并用他们来做一些简单的数据修改操作。例如：求第三列的数字之和：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN> awk ‘</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=en-US>{ x += $3 } END { print x }’</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>。这可能会比</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>Python</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>快</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>3</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white' lang=zh-CN>倍，并比</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>Python</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>的代码少三倍。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>使用 shuf 来打乱一个文件中的行或是选择文件中一个随机的行。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>sort</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>命令的选项。了解</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>key</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>是什么（</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>-t</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>-k</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>）。具体说来，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>-k1,1</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来对第一列排序，</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>-k1</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>来对全行排序。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>Stable sort (sort -s) </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>会很有用。例如：如果你要想对两例排序，先是以第二列，然后再以第一列，那么你可以这样：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+sort -k1,1 | sort -s -k2,2</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white' lang=zh-CN>●</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>我们知道，在</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>bash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>命令行下，</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>Tab</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>键是用来做目录文件自动完成的事的。但是如果你想输入一个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>Tab</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white' lang=zh-CN>字符（比如：你想在</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>sort -t</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>选项后输入</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>&lt;tab&gt;</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>字符），你可以先按</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>Ctrl-V</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>，然后再按</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>Tab</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white' lang=zh-CN>键，就可以输入</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>&lt;tab&gt;</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>字符了。当然，你也可以使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>$’</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=en-US>\t’</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你想查看二进制文件，你可以使用</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>hd</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>命令（在</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>CentOS</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>下是</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>hexdump</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>命令），如果你想编译二进制文件，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>bvi</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>命令（</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>http://bvi.sourceforge.net/&nbsp;</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>墙）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>另外，对于二进制文件，你可以使用strings（配合grep等）来查看二进制中的文本。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>对于文本文件转码，你可以试一下 iconv。或是试试更强的
+uconv 命令（这个命令支持更高级的Unicode编码）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你要分隔一个大文件，你可以使用</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>split</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>命令（</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>split
+by size</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>）和</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>csplit</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>命令（</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>split
+by a pattern</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>）。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt'>&nbsp;</p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C'><span style='font-weight:bold;background:white'>系统调试</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你想知道磁盘、</span><span style='font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white'>CPU</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>、或网络状态，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+iostat, netstat, top (</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>或更好的</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> htop), </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>还有</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+dstat </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>命令。你可以很快地知道你的系统发生了什么事。关于这方面的命令，还有</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>iftop,
+iotop</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>等（参看《</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>28</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Unix/Linux</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的命令行神器》）</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white' lang=zh-CN>●</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>要了解内存的状态，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>free</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>和</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>vmstat</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>命令。具体来说，你需要注意</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN> “</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white' lang=en-US>cached” </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>的值，这个值是</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>Linux</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white' lang=zh-CN>内核占用的内存。还有</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'
+lang=zh-CN>free</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white' lang=zh-CN>的值。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>Java </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>系统监控有一个小的技巧是，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>kill
+-3 &lt;pid&gt; </span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>发一个</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>SIGQUIT</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的信号给</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>JVM</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>，可以把堆栈信息（包括垃圾回收的信息）</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>dump</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>到</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>stderr/logs</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> mtr </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>会比使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+traceroute </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>要更容易定位一个网络问题。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你要找到哪个</span><span style='font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white'>socket</span><span style='font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>或进程在使用网络带宽，你可以使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+iftop </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>或</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> nethogs</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white'>Apache</span><span style='font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white'>的一个叫</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> ab </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的工具是一个很有用的，用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>quick-and-dirty</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的方式来测试网站服务器的性能负载的工作。如果你需要更为复杂的测试，你可以试试</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+siege</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你要抓网络包的话，试试</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'> wireshark </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>或</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+tshark</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> strace </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+ltrace</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>。这两个命令可以让你查看进程的系统调用，这有助于你分析进程的</span><span style='font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>hang</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>在哪了，怎么</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>crash</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>和</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>failed</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的。你还可以用其来做性能</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>profile</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>，使用</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'> -c
+</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white'>选项，你可以使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>-p</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>选项来</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>attach</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>上任意一个进程。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>了解用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>ldd</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>命令来检查相关的动态链接库。注意：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>ldd</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>的安全问题</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>gdb</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>来调试一个正在运行的进程或分析</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>core
+dump</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>文件。参看我写的《</span><span style='font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white'>GDB</span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>中应该知道的几个调试方法》</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>学会到</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> /proc </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>目录中查看信息。这是一个</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>Linux</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>内核运行时记录的整个操作系统的运行统计和信息，比如：</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+/proc/cpuinfo, /proc/xxx/cwd, /proc/xxx/exe, /proc/xxx/fd/, /proc/xxx/smaps.</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>如果你调试某个东西为什么出错时，</span><span style='font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white'>sar</span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>命令会有用。它可以让你看看</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>
+CPU, </span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>内存</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'>, </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>网络</span><span
+style='font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white'>, </span><span
+style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white'>等的统计信息。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;margin-left:.375in;line-height:19pt'><span
+style='font-family:"Segoe UI Symbol";font-size:10.5pt;color:#333333;background:
+white'>●</span><span style='font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white'>使用</span><span style='font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white'> dmesg </span><span style='font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white'>来查看一些硬件或驱动程序的信息或问题。</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>&nbsp;</span></p>
+
+<p style='margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E'><span style='background:white'>作者最后加了一个免责声明：Disclaimer: Just
+because you&nbsp;</span><span style='font-style:italic;background:white'>can</span><span
+style='background:white'>&nbsp;do something in bash, doesn’t necessarily mean
+you should. ;) （全文完）</span></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:宋体;font-size:9pt;color:#969696;
+direction:ltr'>已使用 Microsoft OneNote 2013 创建。</p>
+
+</div>
+
+</body>
+
+</html>
+
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<p></p>
+
+<p>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="ProgId" content="OneNote.File">
+<meta name="Generator" content="Microsoft OneNote 15">
+<link id="Main-File" rel="Main-File" href="file6407.htm">
+<link rel="File-List" href="file6407.files/filelist.xml">
+</p>
+
+<p></p>
+
+<div style="direction:ltr;border-width:100%">
+
+<div style="direction:ltr;margin-top:0in;margin-left:0in;width:10.4791in">
+
+<div style="direction:ltr;margin-top:0in;margin-left:0in;width:3.2534in">
+
+<p style="margin-top:0pt;margin-bottom:3pt;font-family:微软雅黑;font-size:20.0pt;
+color:black"><span style="font-weight:bold">应该知道的Linux技巧</span></p>
+
+</div>
+
+<div style="direction:ltr;margin-top:.0388in;margin-left:0in;width:1.5805in">
+
+
+</div>
+
+<div style="direction:ltr;margin-top:.4979in;margin-left:0in;width:10.4791in">
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">这篇文章来源于Quroa的一个问答《What are some
+time-saving tips that every Linux user should know?》——
+Linux用户有哪些应该知道的提高效率的技巧。我觉得挺好的，总结得比较好，把其转过来，并加了一些自己的理解。 首先，我想告诉大家，</span><span style="font-weight:bold;background:white">在Unix/Linux下，最有效率技巧的不是操作图形界面，而是命令行操作，因为命令行意味着自动化</span><span style="background:white">。如果你看过《你可能不知道的Shell》以及《28个Unix/Linux的命令行神器》你就会知道Linux有多强大，这个强大完全来自于命令行，于是，就算你不知道怎么去做一个环保主义的程序员，至少他们可以让你少熬点夜，从而有利于你的身体健康和性生活。下面是一个有点长的列表，正如作者所说，你并不需要知道所有的这些东西，但是如果你还在很沉重地在使用Linux的话，这些东西都值得你看一看。
+（注：如果你想知道下面涉及到的命令的更多的用法，你一定要man一点。对于一些命令，你可以需要先yum或apt-get来安装一下，如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C"><span style="background:white">基础</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-weight:bold;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">学习</span><span style="font-weight:bold;
+font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">&nbsp;Bash&nbsp;</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">。你可以</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">man
+bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来看看</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">bash</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">的东西，并不复杂也并不长。你用别的</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">shell</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">也行，但是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">是很强大的并且也是系统默认的。（学习</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">zsh</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">或</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">tsch</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">只会让你在很多情况下受到限制）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-weight:bold;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">学习</span><span style="font-weight:bold;
+font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> vim</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">&nbsp;</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">。在</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Linux</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">下，基本没有什么可与之竞争的编</span><span style="text-decoration:line-through;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">译</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">辑器（就算你是一个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Emacs</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">或</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Eclipse</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的重度用户）。你可以看看《简明</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">vim</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">攻略》和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">《</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Vim</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的冒险游戏》以及《给程序员的</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Vim</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">速查卡》还有《把</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Vim</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">变成一个编程的</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">IDE</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">》等等。</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-weight:bold;font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;
+color:#333333;background:white">●</span><span style="font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">了解</span><span style="font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white"> ssh</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">。明白不需要口令的用户认证（通过</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ssh-agent, ssh-add</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">），学会用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ssh</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">翻墙，用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">scp</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">而不是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ftp</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">传文件，等等。你知道吗？</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">scp
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">远端的时候，你可以按</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">tab</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">键来查看远端的目录和文件（当然，需要无口令的用户认证），这都是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的功劳。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-weight:bold;font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;
+color:#333333;background:white">●</span><span style="font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">熟悉</span><span style="font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">bash</span><span style="font-weight:bold;font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">的作业管理</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">，如：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+&amp;, Ctrl-Z, Ctrl-C, jobs, fg, bg, kill, </span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">等等。当然，你也要知道</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Ctrl+\</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">（</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">SIGQUIT</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">）和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Ctrl+C
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">（</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">SIGINT</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">）的区别。</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-weight:bold;font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;
+color:#333333;background:white" lang="zh-CN">●</span><span style="font-weight:
+bold;font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">简单的文件管理</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">&nbsp;</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> ls </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> ls -l (</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">你最好知道</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> “</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="en-US">ls -l” </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">的每一列的意思</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">), less, head, tail </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> tail -f, ln </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> ln -s (</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">你知道明白</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">hard link</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">soft link</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">的不同和优缺点</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">), chown, chmod, du (</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">如果你想看看磁盘的大小</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> du -sk *), df, mount</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">。当然，原作者忘了</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">find</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">命令。</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-weight:bold;font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;
+color:#333333;background:white">●</span><span style="font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">基础的网络管理</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> ip
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">或</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white"> ifconfig, dig</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">。当然，原作者还忘了如</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">netstat,
+ping, traceroute, </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">等</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-weight:bold;font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;
+color:#333333;background:white">●</span><span style="font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">理解正则表达式</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">，还有</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">grep/egrep</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的各种选项。比如：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+-o, -A, </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> -B </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">这些选项是很值得了解的。</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-weight:bold;font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;
+color:#333333;background:white">●</span><span style="font-weight:bold;
+font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">学习使用</span><span style="font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white"> apt-get </span><span style="font-weight:bold;font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-weight:bold;font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white"> yum </span><span style="font-weight:bold;font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">来查找和安装软件</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">（前者的经典分发包是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Ubuntu</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">，后者的经典分发包是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Redhat</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">），我还建议你试着从源码编译安装软件。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C"><span style="font-weight:bold;background:white">日常</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">在</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> bash </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">里，使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+Ctrl-R </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">而不是上下光标键来查找历史命令。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">在</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> bash</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">里，使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+Ctrl-W </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来删除最后一个单词，使用</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> Ctrl-U </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来删除一行。请</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">man
+bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">后查找</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">Readline Key Bindings</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">一节来看看</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的默认热键，比如：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Alt-.
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">把上一次命令的最后一个参数打出来，而</span><span style="font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white">Alt-* </span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">则列出你可以输入的命令。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">回到上一次的工作目录：</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> cd </span><span style="font-family:&quot;Helvetica Neue&quot;;font-size:12.0pt;color:#3E3E3E;background:
+white">–</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white"> &nbsp;</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">（回到</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">home</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> cd
+~</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> xargs</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">。这是一个很强大的命令。你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">-L</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来限定有多少个命令，也可以用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">-P</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来指定并行的进程数。如果你不知道你的命令会变成什么样，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">xargs
+echo</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来看看会是什么样。当然，</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> -I{} </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">也很好用。示例：</span></p>
+
+<p style="margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<div style="direction:ltr">
+
+<table border="1" cellpadding="0" cellspacing="0" valign="top" style="direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in">
+ <tbody><tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">1</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">2</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">3</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:3.1555in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">find . -name \*.py |
+  xargs grep some_function</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">&nbsp;</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">cat hosts | xargs
+  -I{} ssh root@{} hostname</p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">pstree -p </span><span style="font-family:微软雅黑;font-size:
+12.0pt;color:#3E3E3E;background:white">可以帮你显示进程树。（读过我的那篇《一个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">fork</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的面试题》的人应该都不陌生）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> pgrep </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+pkill </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来找到或是</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">kill </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">某个名字的进程。</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+(-f </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">选项很有用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">).</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解可以发给进程的信号。例如：要挂起一个进程，使用</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> kill -STOP [pid]. </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+man 7 signal </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来查看各种信号，使用</span><span style="font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white">kill -l </span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来查看数字和信号的对应表</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> nohup </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">或</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+&nbsp;disown </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你要让某个进程运行在后台。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">netstat -lntp</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来看看有侦听在网络某端口的进程。当然，也可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+lsof</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">在</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">bash</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">的脚本中，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+set -x </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">debug</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">输出。使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+set -e </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">来当有错误发生的时候</span><span style="font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white">abort</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">执行。考虑使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+set -o pipefail </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">来限制错误。还可以使用</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white">trap</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来截获信号（如截获</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ctrl+c</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">）。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">在bash 脚本中，subshells (写在圆括号里的)
+是一个很方便的方式来组合一些命令。一个常用的例子是临时地到另一个目录中，例如：</span></p>
+
+<p style="margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<div style="direction:ltr">
+
+<table border="1" cellpadding="0" cellspacing="0" valign="top" style="direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in">
+ <tbody><tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">1</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">2</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">3</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:2.7125in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt"># do something in
+  current dir</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">(cd /some/other/dir;
+  other-command)</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt"># continue in
+  original dir</p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white" lang="zh-CN">●</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">在</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> bash </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">中，注意那里有很多的变量展开。如：检查一个变量是否存在</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">: ${name:?error
+message}</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white" lang="zh-CN">。如果一个</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">的脚本需要一个参数，也许就是这样一个表达式</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">
+input_file=<span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><merror><mtext>{1:?usage:</mtext></merror></math>" role="presentation" style="position: relative;"><span class="math" id="MathJax-Span-7" aria-hidden="true" style=""><span class="noError" id="MathJax-Span-8" style="display: inline-block;">{1:?usage:</span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><merror><mtext>{1:?usage:</mtext></merror></math></span></span><script type="math/tex" id="MathJax-Element-4">{1:?usage: </script>0 input_file}</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">。一个计算表达式：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> i=$(( (i + 1) % 5 ))</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">。一个序列：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> {1..10}</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">。</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">截断一个字符串：</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> ${var%suffix} </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> ${var#prefix}</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">。</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> </span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">示例：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> if var=foo.pdf, then echo ${var%.pdf}.txt prints “</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="en-US">foo.txt”.</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">通过</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> &lt;(some command) </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">可以把某命令当成一个文件。示例：比较一个本地文件和远程文件</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+/etc/hosts</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">：</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> diff /etc/hosts &lt;(ssh somehost cat
+/etc/hosts)</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white" lang="zh-CN">●</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">了解什么叫</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> “</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="en-US">here documents” </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">，就是诸如</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> cat
+&lt;&lt;EOF </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white" lang="zh-CN">这样的东西。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white" lang="zh-CN">●</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">在</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">中，使用重定向到标准输出和标准错误。如：</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> some-command
+&gt;logfile 2&gt;&amp;1</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">。另外，要确认某命令没有把某个打开了的文件句柄重定向给标准输入，最佳实践是加上</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> “</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="en-US">&lt;/dev/null”</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">，把</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">/dev/null</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">重定向到标准输入。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> man ascii </span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来查看</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+ASCII </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">表。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">在远端的</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> ssh </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">会话里，使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+screen </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">或</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> dtach </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">来保存你的会话。（参看《</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">28</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Unix/Linux</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的命令行神器》）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">要来</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">debug Web</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">，试试</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">curl
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white"> curl -I </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">或是</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> wget </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">。我觉得</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">debug
+Web</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">的利器是</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">firebug</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">，</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">curl</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">wget</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">是用来抓网页的，呵呵。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">把</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> HTML </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">转成文本：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+lynx -dump -stdin</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你要处理</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">XML</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">，使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+xmlstarlet</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">对于</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> Amazon S3</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">，</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+s3cmd </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">是一个很方便的命令（还有点不成熟）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">在</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> ssh</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">中，知道怎么来使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ssh</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">隧道。通过</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> -L
+or -D (</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">还有</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">-R) </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">，翻墙神器。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">你还可以对你的ssh 做点优化。比如，.ssh/config
+包含着一些配置：避免链接被丢弃，链接新的host时不需要确认，转发认证，以前使用压缩（如果你要使用scp传文件）：</span></p>
+
+<p style="margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<div style="direction:ltr">
+
+<table border="1" cellpadding="0" cellspacing="0" valign="top" style="direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in">
+ <tbody><tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">1</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">2</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">3</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">4</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">5</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">6</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:1.9694in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">TCPKeepAlive=yes</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">ServerAliveInterval=15</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">ServerAliveCountMax=6</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">StrictHostKeyChecking=no</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">Compression=yes</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">ForwardAgent=yes</p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你有输了个命令行，但是你改变注意了，但你又不想删除它，因为你要在历史命令中找到它，但你也不想执行它。那么，你可以按下</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+Alt-# </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">，于是这个命令关就被加了一个</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">#</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">字符，于是就被注释掉了。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C"><span style="font-weight:bold;background:white">数据处理&nbsp;</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> sort </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+uniq </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">命令</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> (</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">包括</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+uniq </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">的</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> -u </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> -d
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">选项</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">).</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> cut, paste, </span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+join </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">命令来操作文本文件。很多人忘了在</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">cut</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">前使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">join</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">如果你知道怎么用sort/uniq来做集合交集、并集、差集能很大地促进你的工作效率。假设有两个文本文件a和b已解被
+uniq了，那么，用sort/uniq会是最快的方式，无论这两个文件有多大（sort不会被内存所限，你甚至可以使用-T选项，如果你的/tmp目录很小）</span></p>
+
+<p style="margin-left:.375in;margin-top:0pt;margin-bottom:7pt;font-family:微软雅黑;
+font-size:10.5pt">&nbsp;</p>
+
+<div style="direction:ltr">
+
+<table border="1" cellpadding="0" cellspacing="0" valign="top" style="direction:ltr;
+ border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
+ 1pt;margin-left:.3333in">
+ <tbody><tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:.7715in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">1</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">2</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">3</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">4</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt;color:#979797;
+  text-align:right">5</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
+  vertical-align:top;width:4.0611in;padding:2.0pt 3.0pt 2.0pt 3.0pt">
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt"><span lang="zh-CN">cat
+  a b | sort | uniq &gt; c&nbsp;&nbsp;</span><span lang="en-US"> # c is a union b
+  </span><span lang="zh-CN">并集</span></p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.5pt">&nbsp;</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt"><span lang="zh-CN">cat
+  a b | sort | uniq -d &gt; c&nbsp;&nbsp;</span><span lang="en-US"> # c is a
+  intersect b </span><span lang="zh-CN">交集</span></p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt">&nbsp;</p>
+  <p style="margin:0in;font-family:微软雅黑;font-size:10.0pt"><span lang="zh-CN">cat
+  a b b | sort | uniq -u &gt; c&nbsp;&nbsp;</span><span lang="en-US"> # c is set
+  difference a - b </span><span lang="zh-CN">差集</span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解和字符集相关的命令行工具，包括排序和性能。很多的</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Linux</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">安装程序都会设置</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">LANG
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">或是其它和字符集相关的环境变量。这些东西可能会让一些命令（如：</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">sort</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">）的执行性能慢</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">N</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">多倍（注：就算是你用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">UTF-8</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">编码文本文件，你也可以很安全地使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ASCII</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来对其排序）。如果你想</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Disable</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">那个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">i18n
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">并使用传统的基于</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">byte</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">的排序方法，那就设置</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">export&nbsp;LC_ALL=C
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">（实际上，你可以把其放在</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> .bashrc</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">）。如果这设置这个变量，你的</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">sort</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">命令很有可能会是错的。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white" lang="zh-CN">●</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">了解</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> awk </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> sed</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">，并用他们来做一些简单的数据修改操作。例如：求第三列的数字之和：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN"> awk ‘</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="en-US">{ x += $3 } END { print x }’</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">。这可能会比</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">Python</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">快</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">3</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white" lang="zh-CN">倍，并比</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">Python</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">的代码少三倍。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">使用 shuf 来打乱一个文件中的行或是选择文件中一个随机的行。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">sort</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">命令的选项。了解</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">key</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">是什么（</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">-t</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">-k</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">）。具体说来，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">-k1,1</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来对第一列排序，</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">-k1</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">来对全行排序。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">Stable sort (sort -s) </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">会很有用。例如：如果你要想对两例排序，先是以第二列，然后再以第一列，那么你可以这样：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+sort -k1,1 | sort -s -k2,2</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white" lang="zh-CN">●</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">我们知道，在</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">bash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">命令行下，</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">Tab</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">键是用来做目录文件自动完成的事的。但是如果你想输入一个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">Tab</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white" lang="zh-CN">字符（比如：你想在</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">sort -t</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">选项后输入</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">&lt;tab&gt;</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">字符），你可以先按</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">Ctrl-V</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">，然后再按</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">Tab</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white" lang="zh-CN">键，就可以输入</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">&lt;tab&gt;</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">字符了。当然，你也可以使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">$’</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="en-US">\t’</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你想查看二进制文件，你可以使用</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">hd</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">命令（在</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">CentOS</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">下是</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">hexdump</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">命令），如果你想编译二进制文件，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">bvi</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">命令（</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">http://bvi.sourceforge.net/&nbsp;</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">墙）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">另外，对于二进制文件，你可以使用strings（配合grep等）来查看二进制中的文本。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">对于文本文件转码，你可以试一下 iconv。或是试试更强的
+uconv 命令（这个命令支持更高级的Unicode编码）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你要分隔一个大文件，你可以使用</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">split</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">命令（</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">split
+by size</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">）和</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">csplit</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">命令（</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">split
+by a pattern</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">）。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:10.5pt">&nbsp;</p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#76923C"><span style="font-weight:bold;background:white">系统调试</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你想知道磁盘、</span><span style="font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white">CPU</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">、或网络状态，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+iostat, netstat, top (</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">或更好的</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> htop), </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">还有</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+dstat </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">命令。你可以很快地知道你的系统发生了什么事。关于这方面的命令，还有</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">iftop,
+iotop</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">等（参看《</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">28</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Unix/Linux</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的命令行神器》）</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white" lang="zh-CN">●</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">要了解内存的状态，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">free</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">和</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">vmstat</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">命令。具体来说，你需要注意</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN"> “</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="en-US">cached” </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">的值，这个值是</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">Linux</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">内核占用的内存。还有</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white" lang="zh-CN">free</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white" lang="zh-CN">的值。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">Java </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">系统监控有一个小的技巧是，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">kill
+-3 &lt;pid&gt; </span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">发一个</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">SIGQUIT</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的信号给</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">JVM</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">，可以把堆栈信息（包括垃圾回收的信息）</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">dump</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">到</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">stderr/logs</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> mtr </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">会比使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+traceroute </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">要更容易定位一个网络问题。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你要找到哪个</span><span style="font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white">socket</span><span style="font-family:
+微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">或进程在使用网络带宽，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+iftop </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">或</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> nethogs</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;
+background:white">Apache</span><span style="font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E;background:white">的一个叫</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> ab </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的工具是一个很有用的，用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">quick-and-dirty</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的方式来测试网站服务器的性能负载的工作。如果你需要更为复杂的测试，你可以试试</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+siege</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你要抓网络包的话，试试</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white"> wireshark </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">或</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+tshark</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> strace </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+ltrace</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">。这两个命令可以让你查看进程的系统调用，这有助于你分析进程的</span><span style="font-family:
+Calibri;font-size:12.0pt;color:#3E3E3E;background:white">hang</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">在哪了，怎么</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">crash</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">和</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">failed</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的。你还可以用其来做性能</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">profile</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">，使用</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white"> -c
+</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:
+white">选项，你可以使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">-p</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">选项来</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">attach</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">上任意一个进程。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">了解用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">ldd</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">命令来检查相关的动态链接库。注意：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">ldd</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">的安全问题</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">gdb</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">来调试一个正在运行的进程或分析</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">core
+dump</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">文件。参看我写的《</span><span style="font-family:Calibri;font-size:
+12.0pt;color:#3E3E3E;background:white">GDB</span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">中应该知道的几个调试方法》</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">学会到</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> /proc </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">目录中查看信息。这是一个</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">Linux</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">内核运行时记录的整个操作系统的运行统计和信息，比如：</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+/proc/cpuinfo, /proc/xxx/cwd, /proc/xxx/exe, /proc/xxx/fd/, /proc/xxx/smaps.</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">如果你调试某个东西为什么出错时，</span><span style="font-family:Calibri;
+font-size:12.0pt;color:#3E3E3E;background:white">sar</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">命令会有用。它可以让你看看</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">
+CPU, </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">内存</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white">, </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">网络</span><span style="font-family:Calibri;font-size:12.0pt;color:#3E3E3E;background:white">, </span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;background:white">等的统计信息。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;margin-left:.375in;line-height:19pt"><span style="font-family:&quot;Segoe UI Symbol&quot;;font-size:10.5pt;color:#333333;background:
+white">●</span><span style="font-family:微软雅黑;font-size:12.0pt;color:#3E3E3E;
+background:white">使用</span><span style="font-family:Calibri;font-size:12.0pt;
+color:#3E3E3E;background:white"> dmesg </span><span style="font-family:微软雅黑;
+font-size:12.0pt;color:#3E3E3E;background:white">来查看一些硬件或驱动程序的信息或问题。</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">&nbsp;</span></p>
+
+<p style="margin:0in;line-height:19pt;font-family:微软雅黑;font-size:12.0pt;
+color:#3E3E3E"><span style="background:white">作者最后加了一个免责声明：Disclaimer: Just
+because you&nbsp;</span><span style="font-style:italic;background:white">can</span><span style="background:white">&nbsp;do something in bash, doesn’t necessarily mean
+you should. ;) （全文完）</span></p>
+
+<p></p></div><p></p>
+
+<p></p></div><p></p>
+
+<p></p></div><p></p>
+
+<div>
+
+<p style="margin:0in">&nbsp;</p>
+
+<p style="text-align:left;margin:0in;font-family:宋体;font-size:9pt;color:#969696;
+direction:ltr">已使用 Microsoft OneNote 2013 创建。</p>
+
+</div>
+
+<p></p>
+
+<p></p>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2013-2016 by Vito Yane.</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "[2016-02-27]-[1543].html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+</body>
+</html>
